@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimVendedor"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{63F28978-972C-469A-BC1F-DBF9070BF449}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{B1362A1D-50B4-4A8C-B3D2-FF7F22F1C4C5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWnRNz0k2wEKCnCzBUM/6/H+0Uh2taEXpUKcKoExa57wAAAAAOgAAAAAIAACAAAADvEz9IHESY5N8qod4pH1dhxjlcCh9hIsiQpuHNSNkXpSAAAADDA24T4m7GoQo4/FcNbKowFmcpVHz/yaQGxmvc0o6RokAAAACiRH3hpIlbAyRB17KJ6+1FRRW9ZYatGoM914lI0Sq9mP++o7ly7ktaeKvPqHFNX57mJWzfADh44MaGjHK3emvd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADVHu7M09cSQf9NAn8tiiolWKdU3n1KGTGsUWAYUs9PgAAAAAAOgAAAAAIAACAAAADTlBBo9r0tIEFHCxN0Zq3XLArD48D9sgfaw6Bos7SOYCAAAABW4QiQ8P6jF3dFOqheokdxQ6ZSkiceNaWbrLiJPDHIVkAAAAAqdiZikglhPw2QxXKU5BEJVkoyEovJV0ieoXuF6+YLCuKA1OzgXewCGu4gHOaQEhDMlvDKEwOQWPcylczYFlMX</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADRvuHvyBWt4iBb5UMKA6sf26WxunG9FtDBs/Pjxa6fGAAAAAAOgAAAAAIAACAAAAD5lT/ScIMSiol60ln2nUZuk9VHjsbU1JLWXrRUsq4v3yAAAAA5YYyoCmf3vC4ACOc55OTC902K2cr5QMgGOUJJsBzdq0AAAADaPKWuuC7l9U8WcAmyQ1kCrOjT4kJq0pQAfn2J/08mjKShNNQghYOw36Ay0cH3CcsVovCOD1zUprUHPcD9abxT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmgulA9D9A+BHv51g1PANHDppLtau/emjtElJkNBbTpQAAAAAOgAAAAAIAACAAAAAEYDKsb9LFhZJUnRFQbGvFqUIOQMcKHR248jB/ZSDMHCAAAACd2BvQITwtLL3nGIR3JjBL+SoJKrr+HhqVMIA86LWiXkAAAABsGZz1tFpp0qNgvdLYrxDkddHKIEGadT1oNicvKv3iNn1gCg3Jw3NBr0PMC0DQEtvtEnFtn+PoM8uVQdrERutK</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -50,20 +50,37 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:refId="Package\Limpiar DimVendedor"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{B7FCF836-748D-41CE-81A5-BE0AA3FA79EB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpiar DimVendedor"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F9379D2D-DD08-4025-B2D6-F18792C3C8F2}"
+          SQLTask:SqlStatementSource="delete DimVendedor" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Llenar DimVendedor"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
       DTS:DTSID="{DECE45AE-149E-4D48-88EA-23A07FFA6FA2}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Tarea Flujo de datos">
+      DTS:ObjectName="Llenar DimVendedor">
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
           version="1">
           <components>
             <component
-              refId="Package\Tarea Flujo de datos\Escribir en DimVendedor"
+              refId="Package\Llenar DimVendedor\Escribir en DimVendedor"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
               description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
@@ -98,7 +115,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Connections[IDbConnection]"
+                  refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DWVentas20250407.sa]"
                   connectionManagerRefId="Package.ConnectionManagers[DWVentas20250407.sa]"
                   description="Administrador de conexiones administrado"
@@ -106,73 +123,73 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]"
+                  refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de ADO NET">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[VendedorID]"
                       cachedDataType="i4"
                       cachedName="VendedorID"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]" />
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[PrimerNombre]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PrimerNombre"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]" />
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[SegundoNombre]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SegundoNombre"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]" />
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[Apellido]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Apellido"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]" />
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[TipoPersona]"
                       cachedDataType="wstr"
                       cachedLength="28"
                       cachedName="TipoPersona"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]" />
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorKey]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorKey]"
                       dataType="i4"
                       name="VendedorKey" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
                       dataType="i4"
                       name="VendedorID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
                       dataType="wstr"
                       length="50"
                       name="PrimerNombre" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
                       dataType="wstr"
                       length="50"
                       name="SegundoNombre" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
                       dataType="wstr"
                       length="50"
                       name="Apellido" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
                       dataType="wstr"
                       length="50"
                       name="TipoPersona" />
@@ -181,22 +198,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET]"
+                  refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]">
+                  synchronousInputId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      lineageId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      lineageId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -205,7 +222,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Leer tabla Vendedores"
+              refId="Package\Llenar DimVendedor\Leer tabla Vendedores"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
@@ -258,7 +275,7 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Connections[IDbConnection]"
+                  refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[AdventureWorks2022.sa]"
                   connectionManagerRefId="Package.ConnectionManagers[AdventureWorks2022.sa]"
                   description="Administrador de conexiones administrado"
@@ -266,131 +283,131 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET]"
+                  refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET]"
                   name="Salida de origen de ADO NET">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[VendedorID]"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[VendedorID]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]"
                       name="VendedorID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[PrimerNombre]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[PrimerNombre]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]"
                       name="PrimerNombre"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[SegundoNombre]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[SegundoNombre]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]"
                       name="SegundoNombre"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[Apellido]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[Apellido]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]"
                       name="Apellido"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoPersona]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoPersona]"
                       length="28"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]"
                       name="TipoPersona"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[VendedorID]"
                       dataType="i4"
                       name="VendedorID" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[PrimerNombre]"
                       dataType="wstr"
                       length="50"
                       name="PrimerNombre" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[SegundoNombre]"
                       dataType="wstr"
                       length="50"
                       name="SegundoNombre" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[Apellido]"
                       dataType="wstr"
                       length="50"
                       name="Apellido" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoPersona]"
                       dataType="wstr"
                       length="28"
                       name="TipoPersona" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET]"
+                  refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET]"
                   isErrorOut="true"
                   name="Salida de error de origen de ADO NET">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[VendedorID]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[VendedorID]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[VendedorID]"
                       name="VendedorID" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[PrimerNombre]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[PrimerNombre]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[PrimerNombre]"
                       name="PrimerNombre" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[SegundoNombre]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[SegundoNombre]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[SegundoNombre]"
                       name="SegundoNombre" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[Apellido]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[Apellido]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[Apellido]"
                       name="Apellido" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[TipoPersona]"
                       dataType="wstr"
                       length="28"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[TipoPersona]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[TipoPersona]"
                       name="TipoPersona" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      refId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -401,15 +418,25 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
           </components>
           <paths>
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
-              endId="Package\Tarea Flujo de datos\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]"
+              refId="Package\Llenar DimVendedor.Paths[Salida de origen de ADO NET]"
+              endId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de origen de ADO NET"
-              startId="Package\Tarea Flujo de datos\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{6E4E0204-C2F7-46F4-AE64-34CAFE975854}"
+      DTS:From="Package\Limpiar DimVendedor"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Llenar DimVendedor" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
 <!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
@@ -421,29 +448,67 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="180,42"
-          Id="Package\Tarea Flujo de datos"
-          TopLeft="5.5,5.5" />
+          Id="Package\Llenar DimVendedor"
+          TopLeft="397.5,165.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Limpiar DimVendedor"
+          TopLeft="187,68" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="279.5,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="208,55.5"
+              Start="0,0"
+              End="208,48">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.75"
+                    Point2="0,27.75"
+                    Point3="4,27.75" />
+                  <mssgle:LineSegment
+                    End="204,27.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="204,27.75"
+                    Point2="208,27.75"
+                    Point3="208,31.75" />
+                  <mssgle:LineSegment
+                    End="208,48" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Tarea Flujo de datos">
+    design-time-name="Package\Llenar DimVendedor">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="190,42"
-          Id="Package\Tarea Flujo de datos\Leer tabla Vendedores"
+          Id="Package\Llenar DimVendedor\Leer tabla Vendedores"
           TopLeft="221,92" />
         <NodeLayout
           Size="201,42"
-          Id="Package\Tarea Flujo de datos\Escribir en DimVendedor"
+          Id="Package\Llenar DimVendedor\Escribir en DimVendedor"
           TopLeft="435,207" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+          Id="Package\Llenar DimVendedor.Paths[Salida de origen de ADO NET]"
           TopLeft="316,134">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -480,7 +545,7 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Leer tabla Vendedores">
+    design-time-name="Package\Llenar DimVendedor\Escribir en DimVendedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -488,7 +553,7 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Escribir en DimVendedor">
+    design-time-name="Package\Llenar DimVendedor\Leer tabla Vendedores">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
