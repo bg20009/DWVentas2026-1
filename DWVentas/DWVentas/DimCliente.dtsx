@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{3C595BA8-BA88-4DDB-8AFE-9AC79E44EAA7}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{F185A0AA-F23C-4C67-9CE5-41516B159363}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVPhkn0F7GnkMyQmDbgPopV4qPH0dzRCexBQm8M1Fr0wAAAAAOgAAAAAIAACAAAAAfjiIOYuWQAuQLNjVCd6+vqm+CYSMefdTMSYmDO6CjOCAAAACzyktwYi+yKAA6/OLDGTDuFil1FRb5KX4geseqdLpMeEAAAADShO3cqHmYyQ+1Vk8UbVVfPNB3NT0ZdZRjOM/1u/aOgGql4UGkwNXrAPrPZXSBFGOWk6JTmXXjBiaY22HVnxtl</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGX2Xj0TTP0y2JMDbGLkVtM9tV80JxLl2zqXCHVo4gBQAAAAAOgAAAAAIAACAAAABq6OxiptkOVpx+XBdt1WgeZm/Q6xoLEvXWL/p2MzgZZiAAAADzIbU1Gkno4DSZpSzPlQ7/Ec79JGuQwTqpJ3GvO31wkkAAAAD+H0wF9kL7JMAhZlU/NQYJVydZ4yU2A5F/Y835LUyNb/MItQL3w9oON0eVl684bCC3Czz1mIa96AFNoVueb2e5</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACcOjjnx05rSSBz4X56Qescwwq7IDwgVQpkzdtr6idQmgAAAAAOgAAAAAIAACAAAABnhgSW1HGryMI+hrD4lZ94TdoQWWHzJeRyzbf8vkCcLyAAAACWk8+BS6GFmX21/Ux5MzKW+tJQXx5nVGSZK6XiWzTuT0AAAAAUMz41ZVn7yyjMDrUCxgHLxnp4jEAny7X0Ms6GN4Ru3jPGPErJp0LKenJryEQpsEyY7XGiFpW/bp3nB5iV0RWx</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACtH5rd+DNoAoCx/KbDyE+kVqVych7wJROz/4/dsC5KmAAAAAAOgAAAAAIAACAAAAA3ONueHCjM/U1XPGiiLIz2XDoOt0LCftJ3GJBa07akJCAAAAAFwsAroicRGqs8waQTS1d4ECGok6WcfM10daMkVf9owEAAAACrqH0tZLx31UId10t45h1Ks0b0CJVK1VmqEv5BbAauuBKKu/1+uKU4dkpk6D+z0iVd7Qd2YibltlULgVh4pr7m</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A083203B-3F56-4ABA-AA47-D4CF1CAADCDB}"
-          SQLTask:SqlStatementSource="delete DimCliente" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="delete DimCliente;&#xA;DBCC CHECKIDENT('DimCliente',RESEED,0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -451,39 +451,39 @@ left outer join person.Person p on c.PersonID = p.BusinessEntityID;</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="167,42"
-          Id="Package\Llenar DimCliente"
-          TopLeft="367,160" />
-        <NodeLayout
           Size="180,42"
           Id="Package\Limpieza DimCliente"
           TopLeft="206,75" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Llenar DimCliente"
+          TopLeft="380,204" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="296,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="154.5,43"
+              EndConnector="167.5,87"
               Start="0,0"
-              End="154.5,35.5">
+              End="167.5,79.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,39.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="4,21.5" />
+                    Point1="0,39.5"
+                    Point2="0,43.5"
+                    Point3="4,43.5" />
                   <mssgle:LineSegment
-                    End="150.5,21.5" />
+                    End="163.5,43.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="150.5,21.5"
-                    Point2="154.5,21.5"
-                    Point3="154.5,25.5" />
+                    Point1="163.5,43.5"
+                    Point2="167.5,43.5"
+                    Point3="167.5,47.5" />
                   <mssgle:LineSegment
-                    End="154.5,35.5" />
+                    End="167.5,79.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -546,7 +546,7 @@ left outer join person.Person p on c.PersonID = p.BusinessEntityID;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar DimCliente\Origen de ADO NET">
+    design-time-name="Package\Llenar DimCliente\Destino de ADO NET">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -554,7 +554,7 @@ left outer join person.Person p on c.PersonID = p.BusinessEntityID;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar DimCliente\Destino de ADO NET">
+    design-time-name="Package\Llenar DimCliente\Origen de ADO NET">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

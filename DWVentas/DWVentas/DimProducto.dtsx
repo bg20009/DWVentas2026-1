@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimProducto"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{49ADFBF9-3E9D-4966-8C1F-3F2B3C6F5AB1}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{1F001469-A2CA-414B-8785-1D5EE531577E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADhuv5htK/x1PHEBVhD7mhuXO4KQki7cltkiqgLOCPCmgAAAAAOgAAAAAIAACAAAADrOd1RfLnSuKyQDDiuQuqU2qUIYDLJ7QRr/IY0eWVWNCAAAADsBrTZZKErOSO9tVZc2KZ36ZX8m3+dTdQJJgu9R508AUAAAAANlSLr0ZxbCOxBMrjPVrAdSDK9DvG2qliaC4+p0ys1Gvqwb7q50rv2ZPas8Itc2LkNUkOceGNyA9Co1EasR1Np</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB73c1R7/2sJnZOz2xdzKBIFFFGM9kVB+J787dLeSJ4QwAAAAAOgAAAAAIAACAAAABNGfq2wqyEW0SAJ3xjJBo4V6foMM0O3hVX+/qwZe8m6yAAAADybqZry8y6s7vuRICWJfqhC4N1IwNA/c5o42qBYAa1CEAAAABZYfm8k1IFk5ubwMJ9cLHrPbAcdAJubeiSzFO47qzTYIsqqPYb7cxgzp9H/RIH7yKhXva5MSMgR11AIwB9CV/C</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABZrHh1DxCeCi3LnQhs6n4dq06IhOvp+42CTQzBwwQGFAAAAAAOgAAAAAIAACAAAABXcqTVcufxd48eUJG3s+Pgnms57dwm9J/6sRVf5qjrtCAAAAAhbeMrY7F/C+CHEZOBAU7EEmJUEn4YMGmWcMx8JUdNtEAAAAAPMO9Z6nRIr1Dovj1y91r/FM334ZMAN3H2EYDYue5Ph0h+p3VzIER4mru9yIBDuAVvQv1ZytQIhposdiPn1IAX</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA/rT0ccyBpXCZb3DAJuwF006+AcuXbvLXht2Xos7t48QAAAAAOgAAAAAIAACAAAAB7FY8GKboMrwqnZA91GQIDc0eDI++ehJjAtN15lNPeZiAAAAC0lFlmDyt4zpws+UOTbfyiTPYgRG9XdlsZbD+4ta+4uEAAAAD1k01cMsbCUhapIkdn9nHCkRHo4S+4zmbrCKk3MowibXcWynnYug8WphwqRGKftp2KVNdz2l0Dh8a3GvXHoBZl</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{639F15FE-6AD7-4CE3-8883-DCD1F7D76190}"
-          SQLTask:SqlStatementSource="delete DimProducto" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="delete DimProducto;&#xA;DBCC CHECKIDENT('DimProducto',RESEED,0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -673,13 +673,13 @@ left outer join Production.ProductModel pm on pm.ProductModelID = p.ProductModel
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Llenar DimProducto"
-          TopLeft="301,137" />
-        <NodeLayout
           Size="182,42"
           Id="Package\Limpiar DimProducto"
           TopLeft="181,56" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Llenar DimProducto"
+          TopLeft="301,137" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="272,98">
@@ -768,7 +768,7 @@ left outer join Production.ProductModel pm on pm.ProductModelID = p.ProductModel
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar DimProducto\Leer datos de Productos">
+    design-time-name="Package\Llenar DimProducto\Destino de ADO NET">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -776,7 +776,7 @@ left outer join Production.ProductModel pm on pm.ProductModelID = p.ProductModel
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar DimProducto\Destino de ADO NET">
+    design-time-name="Package\Llenar DimProducto\Leer datos de Productos">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

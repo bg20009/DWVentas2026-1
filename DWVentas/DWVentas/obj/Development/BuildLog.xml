@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>DWVentas</Name>
-    <LastWriteTime>2025-08-07T04:14:09.339676Z</LastWriteTime>
+    <LastWriteTime>2025-08-09T03:36:38.3681307Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,17 +13,32 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimVendedor.dtsx</Name>
-      <LastWriteTime>2025-08-07T02:54:52.0483252Z</LastWriteTime>
+      <LastWriteTime>2025-08-09T03:33:00.7440567Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimProducto.dtsx</Name>
-      <LastWriteTime>2025-08-07T02:52:05.4215325Z</LastWriteTime>
+      <LastWriteTime>2025-08-09T03:33:00.7297878Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimCliente.dtsx</Name>
-      <LastWriteTime>2025-08-07T04:14:09.0284448Z</LastWriteTime>
+      <LastWriteTime>2025-08-09T03:33:00.7020852Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimPromocion.dtsx</Name>
+      <LastWriteTime>2025-08-09T03:33:00.737263Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimTerritorioVentas.dtsx</Name>
+      <LastWriteTime>2025-08-09T03:33:00.7507769Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Orquestador.dtsx</Name>
+      <LastWriteTime>2025-08-09T03:36:38.3428414Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
