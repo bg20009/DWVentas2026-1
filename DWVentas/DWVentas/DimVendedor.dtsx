@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimVendedor"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{612FFAAA-FD13-4F84-933C-C5A52D07FFA5}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{8BCDC8D3-7394-441A-B91E-BEF8C1AAB493}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABw1pZAxij2H2VTB6X7PB6nu/MQtioRDY0ISiiIrIMkWwAAAAAOgAAAAAIAACAAAAAm1b8tmJJ09RT9S8Mo6a5NX/Ym67WQp1m+8dE4kvGcaCAAAADtuYtzck8FEzxCrv8sk/krTddkGvysDynokxTdHYdwnEAAAAA+wJnQz88BjLxo/kFdGMpNmHzWHZy9VNPOSQSJrgJvyNwXyDO/eumXDF8UnHdWFAoo5fWqsFoHwbXfyQ0v4uAY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLdQTIZuXfTxr/ybn4zIandkACyhLDrRsFp0FyHvPFTAAAAAAOgAAAAAIAACAAAACFAJYeNzpbdAlWAO2B105IdF/3q53PwlkBTsmBY1s9MSAAAABskDOBMdOEIcVlZ4oxwnl7zmHqBqqm9EkOhwBCtfSqCEAAAAAeeKRQj5zo4XglgtY1Lz4ixJemKE65AL51iH4eeGnzhB9pI/PuvUBGHu+4BULWHxAGtitTN4FjDlkeuHgKle6M</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACRYQpKBjev7yXfCEtHpQuHPjC1Jv3b3jHMrXacJPRGkgAAAAAOgAAAAAIAACAAAAB37C9XeP/64xQKn5rhKlyI2YuenxcBoBpZ8UGS/sDKMyAAAACNCxf86q+qlHD1Swpy3debpaPQV3uneYltRptlYEBWkkAAAACKIgwT0kaA5OWhTWgJwYcvciVl4zg4Ke2V69Nf9CD6SuYeR5Ux1O9GN68cTqwYLQTFpny8+tbV8mOvYr8KVvvL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGubG4fL85LHEtvFWqjxjerW8fFE9Mb7Me11fNgEM1RwAAAAAOgAAAAAIAACAAAABtdKzmkPgGoST7PoeblcRFVRm6ElvmS735yRximile5CAAAADXKIYcEDGzt2t1iBnlVmOtWWq/coyfkquFE3uIWsh530AAAADI3Iynkji2YqW/mcFTYIj9fgc8K8sv82KMr4mMJ31e4M5iAwjcoQ3XsepvdNTzQgmo6LXDVxVekBsjz8NF3IGg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -235,7 +235,10 @@
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 0 as VendedorID,
+'' as PrimerNombre,'' as SegundoNombre,'' as Apellido,'' as TipoPersona
+union
+select 
 	sp.BusinessEntityID as VendedorID,
 	p.FirstName as PrimerNombre,
 	isnull(p.MiddleName,'') as SegundoNombre,
