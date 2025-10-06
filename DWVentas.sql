@@ -53,7 +53,10 @@ VendedorID int not null, --Llave de negocio
 PrimerNombre varchar(50) not null,
 SegundoNombre varchar(50) not null,
 Apellido varchar(50) not null,
-TipoPersona varchar(50) not null)
+TipoPersona varchar(50) not null,
+Activo bit not null default 1,
+FechaInicio datetime not null default getdate(),
+FechaFin datetime null)
 go
 
 create table DimTerritorioVenta
@@ -86,3 +89,37 @@ Descuento float not null,
 TotalLinea float not null,
 NumeroOrden varchar(25) not null)
 go
+
+/*Procedimientos para actualizar datos*/
+create or alter procedure [dbo].[ActualizarVendedor](@VendedorKey int, @PrimerNombre varchar(100), @SegundoNombre varchar(100),
+create or alter procedure [dbo].[ActualizarVendedor](@VendedorKey int, @PrimerNombre varchar(100), @SegundoNombre varchar(100),
+@Apellido varchar(100), @TipoPersona varchar(100))
+as
+begin
+
+declare @PrimerNombreActual varchar(100),
+		@SegundoNombreActual varchar(100),
+		@ApellidoActual varchar(100),
+		@TipoPersonaActual varchar(100),
+		@IDVendedor int
+
+select @PrimerNombreActual=PrimerNombre, @SegundoNombreActual = SegundoNombre, @ApellidoActual = Apellido,
+@TipoPersonaActual = TipoPersona, @IDVendedor = VendedorID
+from DimVendedor where VendedorKey = @VendedorKey
+
+--SCD1
+if(@PrimerNombreActual<>@PrimerNombre or @SegundoNombreActual<>@SegundoNombre or @ApellidoActual<>@Apellido)
+	update DimVendedor set PrimerNombre = @PrimerNombre, SegundoNombre = @SegundoNombre,
+		Apellido = @Apellido
+		where VendedorKey = @VendedorKey
+
+--SCD2
+if(@TipoPersonaActual<>@TipoPersona)
+	begin
+	update DimVendedor set Activo = 0, FechaFin=getdate() where VendedorKey = @VendedorKey
+
+	insert into DimVendedor (VendedorID,PrimerNombre,SegundoNombre,Apellido,TipoPersona)
+	values (@IDVendedor,@PrimerNombre,@SegundoNombre,@Apellido,@TipoPersona)
+	end
+
+end

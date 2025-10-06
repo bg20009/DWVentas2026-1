@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimVendedor"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{8BCDC8D3-7394-441A-B91E-BEF8C1AAB493}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{5C51BF8F-AA9E-4B9D-9030-9E41727F1CE9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB6OOjOsYPgCoLCL0Yo/JzQzPXL06E/YfNGWi8BEWo4qQAAAAAOgAAAAAIAACAAAAAB0kEr+cyM6//DXM4pfEc+lRjeDamNCIRrIx7Wde7BYiAAAAAGhb6DF4G+wevlFHjND8lF43hr6ZLr2IaGwlD75mvZekAAAADEkYpEV1nNMsvp9MkOW9avPUxGbi2l7iGB5Kn+IFOpSof4N7qcO0aGKLsRo5Uu7KIMLKvCY9T2sy/WLUR+WDYm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoQRj6HaImkShX0XR6fdUdgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmrHt/qa4TugMQoq6yE+RNepJGIZiXVkjr3Y63WdeTYAAAAAAOgAAAAAIAACAAAAAHRzEc9CrASOyUPw91x1pf12AtbF97NFTk1Ljfn6A3yyAAAAB0BprjO3sdDHtO/wP1WR+UfI9yRbh4LMrJ8890kIo830AAAACDEf+b3rcOXFX16AciUsgasDZsszOxkXDuKM3GyFeMdnaKDz8D7ZXjbr+KSJs+qhOb62gaJz2X+iBRx9u9Uyhu</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,24 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHDamtq2JHk6QtAh+0YEXTQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABzOOJ2Zm2tTbsraVgqmgp+TGFNxq9J6QEsbrFBb58JhQAAAAAOgAAAAAIAACAAAADSkE2/UP0gmzBoXqTcWG4ngVDXEQVG4xMqWqyX4SKX0yAAAADjgBHGY6bJxGWYh3HSRzJpAVbkKUGBM77KUY7KC4w3s0AAAADzNaHAwD5oEBToFhj2aw5Wd0w9GfcLJ4WctJZ/6jcShilS7QXrYBDBb7S9GXalKfOD0PgKzozSiQ331/64ZhjR</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoQRj6HaImkShX0XR6fdUdgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABGMlKFSrZopbVS5IqDMTDedd6yPWY6HdWOQvlNSA1DBAAAAAAOgAAAAAIAACAAAADSf6KkRC4i1FrCzrT70E9sHQjf/qSVnRxo3rgzjY0L8CAAAABRk147vK0dRJjuJQC19oeyxdd1nU9Ajm4jAHUe0+yfEkAAAABgpXQZUdqevfDIYHbv6JG7ZKfWfutpRLU6FO5Ttt2dKBo6F8DPAmU6EJGRR93rOfI+jRelNqHqRtc5kyqupExU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\SQLEXPRESS.DWVentas20250407.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CEBA9787-6452-488B-AAE3-D2BC94A3F649}"
+      DTS:ObjectName="localhost\SQLEXPRESS.DWVentas20250407.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;User ID=sa;Initial Catalog=DWVentas20250407;Provider=SQLOLEDB.1;Application Name=SSIS-DimVendedor-{CEBA9787-6452-488B-AAE3-D2BC94A3F649}localhost\SQLEXPRESS.DWVentas20250407.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoQRj6HaImkShX0XR6fdUdgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACtAeoxQG90dpO7HM+D6y+K5rakNSNoE0/sVIxVwWVW7QAAAAAOgAAAAAIAACAAAAD/gaWQmzSOSkGRth93/F9wKGFq0R4tWSzK9uabXQ/MrSAAAACXBud4m897le5WZpFlWZGoMtVBm7QJoW6WIusoJBw5F0AAAABGnwIUcExfYHx2vtEjJZN2FR8zUktzcWBk41WuNw0PKBslI0v424Q0B0g3uRcz1/V1xsaQNqPGgs8hCChdAhgL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -53,6 +70,7 @@
       DTS:refId="Package\Limpiar DimVendedor"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{B7FCF836-748D-41CE-81A5-BE0AA3FA79EB}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -80,11 +98,347 @@
           version="1">
           <components>
             <component
-              refId="Package\Llenar DimVendedor\Escribir en DimVendedor"
+              refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Actualizar valores en DimVendedor"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">exec ActualizarVendedor ?,?,?,?,?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS.DWVentas20250407.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS.DWVentas20250407.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].Columns[VendedorKey]"
+                      cachedDataType="i4"
+                      cachedName="VendedorKey"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@VendedorKey]"
+                      lineageId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas coincidentes de búsqueda].Columns[VendedorKey]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].Columns[PrimerNombreConv]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PrimerNombreConv"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@PrimerNombre]"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[PrimerNombreConv]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].Columns[SegundoNombreConv]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SegundoNombreConv"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@SegundoNombre]"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[SegundoNombreConv]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].Columns[ApellidoConv]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ApellidoConv"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Apellido]"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[ApellidoConv]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].Columns[TipoPersonaConv]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="28"
+                      cachedName="TipoPersonaConv"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@TipoPersona]"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[TipoPersonaConv]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@VendedorKey]"
+                      dataType="i4"
+                      name="@VendedorKey">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@PrimerNombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="@PrimerNombre">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@SegundoNombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="@SegundoNombre">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Apellido]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="@Apellido">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB].ExternalColumns[@TipoPersona]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="@TipoPersona">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar DimVendedor\Buscar Vendedor en DW"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Buscar Vendedor en DW"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimVendedor]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimVendedor]) [refTable]
+where [refTable].[VendedorID] = ? and activo=1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="VendedorKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VendedorID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PrimerNombre" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SegundoNombre" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Apellido" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TipoPersona" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Activo" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaInicio" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FechaFin" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS.DWVentas20250407.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS.DWVentas20250407.sa]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Inputs[Entrada de búsqueda].Columns[VendedorID]"
+                      cachedDataType="i4"
+                      cachedName="VendedorID"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">VendedorID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas coincidentes de búsqueda].Columns[VendedorKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas coincidentes de búsqueda].Columns[VendedorKey]"
+                      name="VendedorKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">VendedorKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
               description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
-              name="Escribir en DimVendedor"
+              name="Cargar Datos Nuevos en DimVendedor"
               usesDispositions="true"
               version="2">
               <properties>
@@ -115,7 +469,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Connections[IDbConnection]"
+                  refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DWVentas20250407.sa]"
                   connectionManagerRefId="Package.ConnectionManagers[DWVentas20250407.sa]"
                   description="Administrador de conexiones administrado"
@@ -123,97 +477,271 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]"
+                  refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de ADO NET">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[VendedorID]"
                       cachedDataType="i4"
                       cachedName="VendedorID"
-                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
                       lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[VendedorID]" />
                     <inputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[PrimerNombre]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PrimerNombre"
-                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
                       lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]" />
                     <inputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[SegundoNombre]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SegundoNombre"
-                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
                       lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]" />
                     <inputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[Apellido]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Apellido"
-                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
                       lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]" />
                     <inputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].Columns[TipoPersona]"
                       cachedDataType="wstr"
                       cachedLength="28"
                       cachedName="TipoPersona"
-                      externalMetadataColumnId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
+                      externalMetadataColumnId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
                       lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorKey]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorKey]"
                       dataType="i4"
                       name="VendedorKey" />
                     <externalMetadataColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[VendedorID]"
                       dataType="i4"
                       name="VendedorID" />
                     <externalMetadataColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[PrimerNombre]"
                       dataType="wstr"
                       length="50"
                       name="PrimerNombre" />
                     <externalMetadataColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[SegundoNombre]"
                       dataType="wstr"
                       length="50"
                       name="SegundoNombre" />
                     <externalMetadataColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Apellido]"
                       dataType="wstr"
                       length="50"
                       name="Apellido" />
                     <externalMetadataColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[TipoPersona]"
                       dataType="wstr"
                       length="50"
                       name="TipoPersona" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[Activo]"
+                      dataType="bool"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaInicio]"
+                      dataType="dbTimeStamp"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaFin]"
+                      dataType="dbTimeStamp"
+                      name="FechaFin" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET]"
+                  refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Outputs[Salida de error de destino de ADO NET]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de ADO NET"
-                  synchronousInputId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]">
+                  synchronousInputId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      lineageId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      refId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Llenar DimVendedor\Escribir en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      lineageId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar DimVendedor\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[PrimerNombre]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PrimerNombre"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[SegundoNombre]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SegundoNombre"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[Apellido]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Apellido"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]" />
+                    <inputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[TipoPersona]"
+                      cachedDataType="wstr"
+                      cachedLength="28"
+                      cachedName="TipoPersona"
+                      lineageId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[PrimerNombreConv]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[PrimerNombreConv]"
+                      name="PrimerNombreConv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[PrimerNombre]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[SegundoNombreConv]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[SegundoNombreConv]"
+                      name="SegundoNombreConv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[SegundoNombre]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[ApellidoConv]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[ApellidoConv]"
+                      name="ApellidoConv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[Apellido]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[TipoPersonaConv]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="28"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos].Columns[TipoPersonaConv]"
+                      name="TipoPersonaConv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -421,8 +949,23 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
           </components>
           <paths>
             <path
+              refId="Package\Llenar DimVendedor.Paths[Salida de conversión de datos]"
+              endId="Package\Llenar DimVendedor\Actualizar valores en DimVendedor.Inputs[Entrada de comando de OLE DB]"
+              name="Salida de conversión de datos"
+              startId="Package\Llenar DimVendedor\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Llenar DimVendedor.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Llenar DimVendedor\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Llenar DimVendedor.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
               refId="Package\Llenar DimVendedor.Paths[Salida de origen de ADO NET]"
-              endId="Package\Llenar DimVendedor\Escribir en DimVendedor.Inputs[Entrada de destino de ADO NET]"
+              endId="Package\Llenar DimVendedor\Buscar Vendedor en DW.Inputs[Entrada de búsqueda]"
               name="Salida de origen de ADO NET"
               startId="Package\Llenar DimVendedor\Leer tabla Vendedores.Outputs[Salida de origen de ADO NET]" />
           </paths>
@@ -501,41 +1044,123 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
     design-time-name="Package\Llenar DimVendedor">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Llenar DimVendedor\Leer tabla Vendedores"
           TopLeft="221,92" />
         <NodeLayout
-          Size="201,42"
-          Id="Package\Llenar DimVendedor\Escribir en DimVendedor"
-          TopLeft="435,207" />
+          Size="200,42"
+          Id="Package\Llenar DimVendedor\Buscar Vendedor en DW"
+          TopLeft="214,188" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Llenar DimVendedor\Conversión de datos"
+          TopLeft="639,190" />
+        <NodeLayout
+          Size="251,42"
+          Id="Package\Llenar DimVendedor\Actualizar valores en DimVendedor"
+          TopLeft="485,79" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor"
+          TopLeft="183,302" />
         <EdgeLayout
-          Id="Package\Llenar DimVendedor.Paths[Salida de origen de ADO NET]"
-          TopLeft="316,134">
+          Id="Package\Llenar DimVendedor.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="316,230">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="219.5,73"
+              EndConnector="0,72"
               Start="0,0"
-              End="219.5,65.5">
+              End="0,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.5"
-                    Point2="0,36.5"
-                    Point3="4,36.5" />
+                    End="0,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-106.8890234375,26.15234375,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenar DimVendedor.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="414,210">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="225,0"
+              Start="0,0"
+              End="217.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="215.5,36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="215.5,36.5"
-                    Point2="219.5,36.5"
-                    Point3="219.5,40.5" />
+                    End="217.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.93097656249999,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenar DimVendedor.Paths[Salida de conversión de datos]"
+          TopLeft="729,190">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-118.5,-69"
+              Start="0,0"
+              End="-118.5,-61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="219.5,65.5" />
+                    End="0,-30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-30.5"
+                    Point2="0,-34.5"
+                    Point3="-4,-34.5" />
+                  <mssgle:LineSegment
+                    End="-114.5,-34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-114.5,-34.5"
+                    Point2="-118.5,-34.5"
+                    Point3="-118.5,-38.5" />
+                  <mssgle:LineSegment
+                    End="-118.5,-61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Llenar DimVendedor.Paths[Salida de origen de ADO NET]"
+          TopLeft="315,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -548,8 +1173,23 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar DimVendedor\Escribir en DimVendedor">
+    design-time-name="Package\Llenar DimVendedor\Buscar Vendedor en DW">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">true</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimVendedor]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -557,6 +1197,14 @@ inner join person.Person p on p.BusinessEntityID = sp.BusinessEntityID;</propert
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Llenar DimVendedor\Leer tabla Vendedores">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar DimVendedor\Cargar Datos Nuevos en DimVendedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

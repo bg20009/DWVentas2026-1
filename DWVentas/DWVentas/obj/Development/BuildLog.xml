@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>DWVentas</Name>
-    <LastWriteTime>2025-08-09T04:42:42.1982361Z</LastWriteTime>
+    <LastWriteTime>2025-10-02T03:03:50.8453314Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimVendedor.dtsx</Name>
-      <LastWriteTime>2025-08-09T04:33:27.4172829Z</LastWriteTime>
+      <LastWriteTime>2025-10-06T03:04:29.2401736Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
